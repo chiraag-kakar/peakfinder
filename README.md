@@ -1,4 +1,4 @@
-# PeakFinder
+# Peak Locator
 
 A robust Python toolkit for deterministic peak detection in one-dimensional, two-dimensional, and higher-dimensional numerical data.
 
@@ -43,20 +43,20 @@ The library offers automatic algorithm selection based on input characteristics,
 ### From PyPI (when published)
 
 ```bash
-pip install peakfinder
+pip install peak-locator
 ```
 
 For visualization support:
 
 ```bash
-pip install peakfinder[viz]
+pip install peak-locator[viz]
 ```
 
 ### From Source / Local Development
 
 ```bash
-git clone https://github.com/yourusername/peakfinder.git
-cd peakfinder
+git clone https://github.com/yourusername/peak-locator.git
+cd peak-locator
 
 # Install dependencies
 pip install -r requirements.txt

@@ -1,6 +1,6 @@
 theme: jekyll-theme-minimal
-title: PeakFinder
-description: Multi-Dimensional Peak Detection for Python
+title: Peak Locator
+description: Deterministic Peak Detection for Multi-Dimensional Data
 logo: docs/assets/peak_detection_diagram.png
 
 # Configure GitHub Pages to serve from docs folder
