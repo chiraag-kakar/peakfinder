@@ -1,16 +1,15 @@
 """N-dimensional peak detection concepts and utilities."""
 
-from typing import List, Optional, Tuple
+from typing import Optional
 
 import numpy as np
 
 from peakfinder.exceptions import DimensionError
-from peakfinder.utils.validation import validate_array
 
 
 def find_peak_nd(
     tensor: np.ndarray, allow_duplicates: bool = True
-) -> Optional[Tuple[int, ...]]:
+) -> Optional[tuple[int, ...]]:
     """
     Find a peak in an N-dimensional tensor.
 
@@ -29,7 +28,7 @@ def find_peak_nd(
 
     Returns
     -------
-    Optional[Tuple[int, ...]]
+    Optional[tuple[int, ...]]
         Tuple of indices representing a peak location, or None if not found.
 
     Raises
@@ -68,7 +67,7 @@ def find_peak_nd(
     max_idx = np.unravel_index(np.argmax(tensor), tensor.shape)
 
     # Verify it's a peak by checking all neighbors
-    def is_peak_at(coord: Tuple[int, ...]) -> bool:
+    def is_peak_at(coord: tuple[int, ...]) -> bool:
         """Check if coordinate is a peak."""
         for dim in range(tensor.ndim):
             for offset in [-1, 1]:

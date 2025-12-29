@@ -1,15 +1,13 @@
 """Tests for 1D peak detection algorithms."""
 
-import pytest
 import numpy as np
 
 from peakfinder.core.one_d import (
-    find_peak_brute_1d,
-    find_peak_binary_1d,
-    find_peak_hybrid_1d,
     find_all_peaks_1d,
+    find_peak_binary_1d,
+    find_peak_brute_1d,
+    find_peak_hybrid_1d,
 )
-from peakfinder.exceptions import ValidationError
 
 
 class TestFindPeakBrute1D:

@@ -1,6 +1,6 @@
 """Peak counting algorithms."""
 
-from typing import List, Optional
+from typing import Optional
 
 import numpy as np
 
@@ -32,7 +32,7 @@ def count_peaks_linear(arr: np.ndarray) -> int:
 
 
 def count_peaks_segment_tree(
-    arr: np.ndarray, queries: Optional[List[tuple]] = None
+    arr: np.ndarray, queries: Optional[list[tuple]] = None
 ) -> int:
     """
     Count peaks using segment tree for efficient range queries.
@@ -49,7 +49,7 @@ def count_peaks_segment_tree(
     ----------
     arr : np.ndarray
         1D array to count peaks in.
-    queries : Optional[List[tuple]], default=None
+    queries : Optional[list[tuple]], default=None
         List of (start, end) tuples for range queries.
         If None, counts all peaks in the array.
 

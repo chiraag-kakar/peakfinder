@@ -1,6 +1,6 @@
 """2D peak visualization utilities."""
 
-from typing import Optional, Tuple
+from typing import Optional
 
 try:
     import matplotlib.pyplot as plt
@@ -17,7 +17,7 @@ from peakfinder.utils.validation import validate_2d_array
 
 def plot_2d_peak(
     matrix: np.ndarray,
-    peak: Optional[Tuple[int, int]] = None,
+    peak: Optional[tuple[int, int]] = None,
     title: Optional[str] = None,
     figsize: tuple = (10, 8),
     cmap: str = "viridis",

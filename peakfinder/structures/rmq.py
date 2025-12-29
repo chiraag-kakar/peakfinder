@@ -1,7 +1,5 @@
 """Range Maximum Query (RMQ) data structure for efficient peak queries."""
 
-from typing import List, Optional
-
 import numpy as np
 
 
@@ -32,7 +30,7 @@ class RMQ:
         self.log_n = int(np.log2(self.n)) + 1
 
         # sparse_table[i][j] = index of max in range [j, j + 2^i - 1]
-        self.sparse_table: List[List[int]] = [
+        self.sparse_table: list[list[int]] = [
             [0] * self.n for _ in range(self.log_n)
         ]
 

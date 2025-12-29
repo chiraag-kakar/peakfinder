@@ -1,6 +1,6 @@
 """1D peak visualization utilities."""
 
-from typing import List, Optional
+from typing import Optional
 
 try:
     import matplotlib.pyplot as plt
@@ -17,7 +17,7 @@ from peakfinder.utils.validation import validate_array
 
 def plot_1d_peaks(
     arr: np.ndarray,
-    peaks: Optional[List[int]] = None,
+    peaks: Optional[list[int]] = None,
     show_all: bool = False,
     title: Optional[str] = None,
     figsize: tuple = (10, 6),

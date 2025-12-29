@@ -1,10 +1,8 @@
 """Tests for 2D peak detection algorithms."""
 
-import pytest
 import numpy as np
 
 from peakfinder.core.two_d import find_peak_2d
-from peakfinder.exceptions import ValidationError
 
 
 class TestFindPeak2D:

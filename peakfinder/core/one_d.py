@@ -1,11 +1,9 @@
 """1D peak detection algorithms."""
 
-from typing import List, Optional
-
 import numpy as np
 
 from peakfinder.exceptions import AlgorithmError
-from peakfinder.utils.compression import compress_duplicates, expand_peak_indices
+from peakfinder.utils.compression import compress_duplicates
 from peakfinder.utils.validation import validate_array
 
 
@@ -163,7 +161,7 @@ def find_peak_hybrid_1d(arr: np.ndarray, allow_duplicates: bool = True) -> int:
     return original_indices[compressed_peak_idx]
 
 
-def find_all_peaks_1d(arr: np.ndarray) -> List[int]:
+def find_all_peaks_1d(arr: np.ndarray) -> list[int]:
     """
     Find all peaks in a 1D array.
 
@@ -180,12 +178,12 @@ def find_all_peaks_1d(arr: np.ndarray) -> List[int]:
 
     Returns
     -------
-    List[int]
+    list[int]
         List of indices where peaks occur.
     """
     arr = validate_array(arr, min_length=1)
 
-    peaks: List[int] = []
+    peaks: list[int] = []
 
     if len(arr) == 1:
         return [0]

@@ -1,7 +1,7 @@
 """Tests for PeakDetector class."""
 
-import pytest
 import numpy as np
+import pytest
 
 from peakfinder import PeakDetector
 from peakfinder.exceptions import DimensionError, ValidationError

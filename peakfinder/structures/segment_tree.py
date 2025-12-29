@@ -1,7 +1,5 @@
 """Segment tree for efficient range queries on peak counting."""
 
-from typing import List, Optional
-
 import numpy as np
 
 from peakfinder.core.one_d import find_all_peaks_1d
@@ -37,7 +35,7 @@ class SegmentTree:
         # This is a simplified implementation
         # A full implementation would track more state
         self.size = 2 * (2 ** (int(np.ceil(np.log2(self.n))))) - 1
-        self.tree: List[int] = [0] * self.size
+        self.tree: list[int] = [0] * self.size
 
         self._build(0, 0, self.n - 1)
 

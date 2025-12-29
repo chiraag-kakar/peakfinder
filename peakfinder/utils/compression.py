@@ -1,11 +1,9 @@
 """Compression utilities for handling duplicate values in peak detection."""
 
-from typing import List, Tuple
-
 import numpy as np
 
 
-def compress_duplicates(arr: np.ndarray) -> Tuple[np.ndarray, List[int]]:
+def compress_duplicates(arr: np.ndarray) -> tuple[np.ndarray, list[int]]:
     """
     Compress consecutive duplicate values in an array.
 
@@ -21,7 +19,7 @@ def compress_duplicates(arr: np.ndarray) -> Tuple[np.ndarray, List[int]]:
     -------
     compressed : np.ndarray
         Array with consecutive duplicates removed.
-    indices : List[int]
+    indices : list[int]
         Original indices corresponding to each compressed value.
         The last index in each group of duplicates is kept.
 
@@ -37,8 +35,8 @@ def compress_duplicates(arr: np.ndarray) -> Tuple[np.ndarray, List[int]]:
     if len(arr) == 0:
         return np.array([]), []
 
-    compressed: List[float] = []
-    indices: List[int] = []
+    compressed: list[float] = []
+    indices: list[int] = []
 
     compressed.append(arr[0])
     indices.append(0)
@@ -52,21 +50,21 @@ def compress_duplicates(arr: np.ndarray) -> Tuple[np.ndarray, List[int]]:
 
 
 def expand_peak_indices(
-    peak_indices: List[int], original_indices: List[int]
-) -> List[int]:
+    peak_indices: list[int], original_indices: list[int]
+) -> list[int]:
     """
     Expand compressed peak indices back to original array indices.
 
     Parameters
     ----------
-    peak_indices : List[int]
+    peak_indices : list[int]
         Peak indices in the compressed array.
-    original_indices : List[int]
+    original_indices : list[int]
         Mapping from compressed indices to original indices.
 
     Returns
     -------
-    List[int]
+    list[int]
         Peak indices in the original array.
 
     Examples

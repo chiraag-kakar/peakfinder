@@ -1,10 +1,10 @@
 """Tests for validation utilities."""
 
-import pytest
 import numpy as np
+import pytest
 
 from peakfinder.exceptions import ValidationError
-from peakfinder.utils.validation import validate_array, validate_2d_array, has_duplicates
+from peakfinder.utils.validation import has_duplicates, validate_2d_array, validate_array
 
 
 class TestValidateArray:

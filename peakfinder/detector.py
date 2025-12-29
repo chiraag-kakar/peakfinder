@@ -1,6 +1,6 @@
 """Main PeakDetector class with automatic algorithm selection."""
 
-from typing import Any, List, Literal, Optional, Tuple, Union
+from typing import Any, Literal, Optional, Union
 
 import numpy as np
 
@@ -94,13 +94,13 @@ class PeakDetector:
         if self._ndim == 1:
             self._has_dups = has_duplicates(self._data_1d)
 
-    def find_any_peak(self) -> Union[int, Tuple[int, ...]]:
+    def find_any_peak(self) -> Union[int, tuple[int, ...]]:
         """
         Find any peak in the data.
 
         Returns
         -------
-        Union[int, Tuple[int, ...]]
+        Union[int, tuple[int, ...]]
             For 1D: index of a peak
             For 2D: (row, column) tuple
             For N-D: tuple of indices
@@ -144,7 +144,7 @@ class PeakDetector:
         else:
             raise ValidationError(f"Unknown mode: {self.mode}")
 
-    def find_all_peaks(self) -> List[Union[int, Tuple[int, ...]]]:
+    def find_all_peaks(self) -> list[Union[int, tuple[int, ...]]]:
         """
         Find all peaks in the data.
 
@@ -200,13 +200,13 @@ class PeakDetector:
                 "count_peaks() is currently only supported for 1D data"
             )
 
-    def find_peak_2d(self) -> Tuple[int, int]:
+    def find_peak_2d(self) -> tuple[int, int]:
         """
         Find a peak in 2D data.
 
         Returns
         -------
-        Tuple[int, int]
+        tuple[int, int]
             (row, column) indices of a peak.
 
         Raises
@@ -220,7 +220,7 @@ class PeakDetector:
             )
         return find_peak_2d(self._data_2d, self.allow_duplicates)
 
-    def find_peak_nd(self) -> Tuple[int, ...]:
+    def find_peak_nd(self) -> tuple[int, ...]:
         """
         Find a peak in N-dimensional data.
 
@@ -252,7 +252,7 @@ class PeakDetector:
         return self._data
 
     @property
-    def shape(self) -> Tuple[int, ...]:
+    def shape(self) -> tuple[int, ...]:
         """Get the shape of the data."""
         return self._shape
 

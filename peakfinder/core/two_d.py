@@ -1,7 +1,5 @@
 """2D peak detection algorithms."""
 
-from typing import Optional, Tuple
-
 import numpy as np
 
 from peakfinder.exceptions import AlgorithmError
@@ -10,7 +8,7 @@ from peakfinder.utils.validation import validate_2d_array
 
 def find_peak_2d(
     matrix: np.ndarray, allow_duplicates: bool = True
-) -> Tuple[int, int]:
+) -> tuple[int, int]:
     """
     Find any peak in a 2D matrix.
 
@@ -31,7 +29,7 @@ def find_peak_2d(
 
     Returns
     -------
-    Tuple[int, int]
+    tuple[int, int]
         (row, column) indices of a peak in the matrix.
 
     Raises
@@ -54,7 +52,7 @@ def find_peak_2d(
 
     def _find_peak_recursive(
         start_col: int, end_col: int
-    ) -> Tuple[int, int]:
+    ) -> tuple[int, int]:
         """Recursive helper function."""
         mid_col = (start_col + end_col) // 2
 
