@@ -10,12 +10,12 @@ A robust Python toolkit for deterministic peak detection in one-dimensional, two
 [![Testing](https://img.shields.io/badge/testing-pytest-blue.svg)](https://pytest.org/)
 [![Semantic Versioning](https://img.shields.io/badge/semver-2.0.0-blue.svg)](https://semver.org/)
 [![Keep a Changelog](https://img.shields.io/badge/changelog-keep%20a%20changelog-blue.svg)](https://keepachangelog.com/)
-[![Release to PyPI](https://github.com/chiraag-kakar/peakfinder/actions/workflows/release.yml/badge.svg?branch=main)](https://github.com/chiraag-kakar/peakfinder/actions/workflows/release.yml)
+[![Release to PyPI](https://github.com/chiraag-kakar/peak-locator/actions/workflows/release.yml/badge.svg?branch=main)](https://github.com/chiraag-kakar/peak-locator/actions/workflows/release.yml)
 
 
 ## Overview
 
-PeakFinder provides a collection of peak detection algorithms for numerical data represented as arrays or matrices.
+Peak Locator provides a collection of peak detection algorithms for numerical data represented as arrays or matrices.
 It supports multiple algorithmic approaches for one-dimensional and two-dimensional inputs, with a unified interface for higher-dimensional data.
 The library offers automatic algorithm selection based on input characteristics, while allowing explicit configuration when a specific method or performance profile is required.
 
@@ -124,7 +124,7 @@ print(f"Total peaks: {count}")
 
 ## Design Philosophy
 
-PeakFinder is designed with the following principles:
+Peak Locator is designed with the following principles:
 
 1. **Simplicity**: Clean, intuitive API that hides algorithmic complexity
 2. **Robustness**: Handles edge cases, duplicates, and invalid inputs gracefully
@@ -135,7 +135,7 @@ PeakFinder is designed with the following principles:
 
 ## Error Handling
 
-PeakFinder performs strict input validation and raises explicit exceptions for:
+Peak Locator performs strict input validation and raises explicit exceptions for:
 
 * Unsupported data types or shapes
 * Invalid dimensionality for a selected algorithm
