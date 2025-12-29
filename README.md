@@ -276,8 +276,8 @@ Contributions are welcome! Please follow these guidelines:
 ### Development Setup
 
 ```bash
-git clone https://github.com/yourusername/peakfinder.git
-cd peakfinder
+git clone https://github.com/yourusername/peak-locator.git
+cd peak-locator
 pip install -r requirements.txt
 pip install -e ".[dev]"
 ```
