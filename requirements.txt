@@ -1,0 +1,15 @@
+# PeakFinder Dependencies
+# Install with: pip install -r requirements.txt
+
+# Core dependencies
+numpy>=1.21.0
+
+# Optional: For visualization features
+# matplotlib>=3.5.0
+
+# Optional: For development (testing, linting, type checking)
+# pytest>=7.0.0
+# pytest-cov>=4.0.0
+# black>=23.0.0
+# ruff>=0.1.0
+# mypy>=1.0.0
